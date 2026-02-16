@@ -1,0 +1,30 @@
+@config "../tailwind.config.js";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;...&display=swap');
+@import 'tailwindcss';
+
+:root {
+    --hero-grid: #e2e8f0; /* slate-200 */
+    --hero-fade: #ffffff;
+}
+
+.dark {
+    --hero-grid: #334155; /* slate-700 */
+    --hero-fade: #020617; /* slate-950 */
+}
+
+
+/* @theme {
+    --font-sans: "Poppins", sans-serif;
+    --font-mono: "Sorts Mill Goudy", monospace;
+} */
+
+@layer base {
+    body {
+        @apply bg-white text-slate-900 antialiased text-sm dark:bg-slate-950 dark:text-slate-100;
+    }
+
+    button {
+        @apply cursor-pointer;
+    }
+}

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <script>
+        // Apply theme before React boots to avoid flashing the wrong colors.
+        (() => {
+            const key = 'theme';
+            const stored = localStorage.getItem(key);
+            const theme =
+                stored === 'dark' || stored === 'light'
+                    ? stored
+                    : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)
+                        ? 'dark'
+                        : 'light';
+
+            document.documentElement.classList.toggle('dark', theme === 'dark');
+            document.documentElement.style.colorScheme = theme;
+        })();
+    </script>
+    <title>Vicente Andrés Moller</title>
+    <meta name="description"
+        content="Vicente Andrés Moller">
+</head>
+
+<body>
+    <script>
+        (() => {
+            const params = new URLSearchParams(window.location.search);
+            const p = params.get("p");
+            if (p) {
+            params.delete("p");
+            const rest = params.toString();
+            const next = decodeURIComponent(p) + (rest ? (p.includes("?") ? "&" : "?") + rest : "");
+            window.history.replaceState(null, "", next);
+            }
+        })();
+    </script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+</body>
+
+</html>
