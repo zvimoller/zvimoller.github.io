@@ -49,7 +49,7 @@ export default function HeroSection() {
                 Vicente A. Moller
             </h2>
             <p className="text-2xl md:text-3xl font-mono mt-6">
-                Software Engineer
+                Data Engineer | AI/ML
             </p>
             <div className="mt-6">
                 <Link
