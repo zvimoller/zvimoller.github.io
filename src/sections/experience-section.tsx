@@ -6,14 +6,14 @@ import Section from "../components/section";
 export default function ExperienceSection() {
     const experience = [
         {
-            image: "/assets/metalbit_systems_logo.jpg",
+            image: "/assets/singularity_logo.png",
             title: "Head of Product / Co-Founder",
-            company: "MetalBit Systems",
+            company: "Singularity",
             location: "Chile",
             start: "11/2025",
             end: "Presente",
             description: [
-                "Superviso la estrategia de producto e innovación en MetalBit, donde creamos soluciones de gobernanza de datos para empresas en América Latina, con un fuerte enfoque en trazabilidad, privacidad, seguridad e implementación segura de IA. Enfocado en convertir los datos en un activo estratégico mediante tecnología confiable, escalable y conforme a normativa.",
+                "Superviso la estrategia de producto e innovación en Singularity, donde creamos soluciones de gobernanza de datos para empresas en América Latina, con un fuerte enfoque en trazabilidad, privacidad, seguridad e implementación segura de IA. Enfocado en convertir los datos en un activo estratégico mediante tecnología confiable, escalable y conforme a normativa.",
             ],
         },
         {
